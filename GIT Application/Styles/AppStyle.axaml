@@ -7,16 +7,28 @@
     </Design.PreviewWith>
 
 	<Style Selector="Window">
-		<Setter Property="Background" Value="#313433"></Setter>		
+		<Setter Property="Background" Value="#313433"/>
 	</Style>
 
 	<Style Selector="Panel.GridSplitter">
-		<Setter Property="Background" Value="#141414"></Setter>
+		<Setter Property="Background" Value="#141414"/>
 	</Style>
 
 	<Style Selector="MenuItem">
-		<Setter Property="Foregorund" Value="White"></Setter>
-		<Setter Property="VerticalAlignment" Value="Stretch"</Setter>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="VerticalAlignment" Value="Stretch"/>
+	</Style>
+
+	<Style Selector="TextBlock.GrayFont">
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Foreground" Value="#777777"/>
+		<Setter Property="FontWeight" Value="SemiBold"/>
+	</Style>
+
+	<Style Selector="TextBlock.PurpleFont">
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Foreground" Value="#AC1E9F"/>
+		<Setter Property="FontWeight" Value="SemiBold"/>
 	</Style>
 	
     <!-- Add Styles Here -->

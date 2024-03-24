@@ -14,6 +14,11 @@
 	<AvaloniaResource Include="Styles\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Assets\System ico\Branch.png" />
+    <None Remove="Assets\System ico\Lock.png" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.0.6" />

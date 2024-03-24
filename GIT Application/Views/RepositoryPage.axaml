@@ -7,16 +7,66 @@
         x:Class="GIT_Application.Views.RepositoryPage"
         Icon="/Assets/avalonia-logo.ico"
         Title="GitHub Application">
-
+	
 	<Window.Styles>
 		<StyleInclude Source="avares://GIT Application/Styles/AppStyle.axaml"/>
 	</Window.Styles>
 
-	<Grid ShowGridLines="True" RowDefinitions="0.1*, *">
-		
+	<Grid RowDefinitions="30 2 *" ColumnDefinitions="232 * 49" ShowGridLines="False">
+		<Menu Grid.Column="0" Grid.ColumnSpan="2">
+			<MenuItem Header="_Edit">
+				<MenuItem Header="_Exit"/>
+			</MenuItem>
+			<MenuItem Header="_File">
+
+			</MenuItem>
+			<MenuItem Header="_Repository">
+
+			</MenuItem>
+			<MenuItem Header="_Branch">
+
+			</MenuItem>
+		</Menu>
+
+		<Panel Grid.Row="1" Grid.ColumnSpan="3" Classes="GridSplitter"/>
+
+		<Grid ShowGridLines="False" Grid.Row="2" RowDefinitions="60, 2, 60, 2, 196, 2, *"
+			  ColumnDefinitions="230, 2">
+
+			<TextBlock Grid.Row="0" Text="Current repository" Margin="50 2 22 20"
+					   Classes="GrayFont"/>
+
+			<TextBlock Grid.Row="0" Text="Praying-Mantis" Margin="50 16 0 0"
+					   Classes="PurpleFont"/>
+
+			<Image Grid.Row="0" HorizontalAlignment="Left" Width="45"
+				Source="/Assets/System ico/Lock.png"/>
+
+			<Image Grid.Row="2" Width="24" HorizontalAlignment="Left" Margin="11"
+				Source="/Assets/System ico/Branch.png"/>
+
+			<TextBlock Grid.Row="2" Text="Current branch" Margin="50 2 22 20"
+					   Classes="GrayFont"/>
+
+			<TextBlock Grid.Row="2" Text="Master" Margin="50 16 0 0"
+					   Classes="PurpleFont"/>
+
+			<Button Grid.Row="4" CornerRadius="50" HorizontalAlignment="Center"
+					VerticalAlignment="Bottom" Content="Commit to {Current Branch}"
+					Margin="22 20 22 20" Height="35" Width="201" Background="Purple"
+					Foreground="White"/>
+
+			<Panel Grid.Row="1" Grid.ColumnSpan="2" Classes="GridSplitter"/>
+			<Panel Grid.Row="3" Grid.ColumnSpan="2" Classes="GridSplitter"/>
+			<Panel Grid.Row="5" Grid.ColumnSpan="2" Classes="GridSplitter"/>
+			<Panel Grid.Column="1" Grid.RowSpan="7" Classes="GridSplitter"/>
+
+		</Grid>
 
 	</Grid>
 
-    
+	<Window.Styles>
+		<StyleInclude Source="avares://GIT Application/Styles/AppStyle.axaml"/>
+	</Window.Styles>
 
 </Window>
