@@ -6,7 +6,18 @@
         </Border>
     </Design.PreviewWith>
 
-	
+	<Style Selector="Window">
+		<Setter Property="Background" Value="#313433"></Setter>		
+	</Style>
+
+	<Style Selector="Panel.GridSplitter">
+		<Setter Property="Background" Value="#141414"></Setter>
+	</Style>
+
+	<Style Selector="MenuItem">
+		<Setter Property="Foregorund" Value="White"></Setter>
+		<Setter Property="VerticalAlignment" Value="Stretch"</Setter>
+	</Style>
 	
     <!-- Add Styles Here -->
 </Styles>

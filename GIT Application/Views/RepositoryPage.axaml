@@ -1,0 +1,22 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:GIT_Application.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+        x:Class="GIT_Application.Views.RepositoryPage"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="GitHub Application">
+
+	<Window.Styles>
+		<StyleInclude Source="avares://GIT Application/Styles/AppStyle.axaml"/>
+	</Window.Styles>
+
+	<Grid ShowGridLines="True" RowDefinitions="0.1*, *">
+		
+
+	</Grid>
+
+    
+
+</Window>
