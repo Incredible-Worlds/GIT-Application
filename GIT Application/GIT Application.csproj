@@ -14,6 +14,10 @@
 	<AvaloniaResource Include="Styles\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Assets\Git-logo.png" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.0.6" />

@@ -12,6 +12,12 @@ namespace GIT_Application.Localization
         {
             Greeting = "Welcome to GitHub \nSibSUTIS Desktop";
             GreetingSecond = "Clone a repository or create a new one";
+            CloneRepo = "Clone a repository";
+            CreateRepo = "Create a repository";
+            NameRepo = "Name:";
+            DescriptionRepo = "Description:";
+            LocalPath = "Local Path:";
+            GitIgnore = "GIT Ignore:";
         }
     }
 }
