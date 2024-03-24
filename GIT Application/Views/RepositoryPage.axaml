@@ -7,13 +7,10 @@
         x:Class="GIT_Application.Views.RepositoryPage"
         Icon="/Assets/avalonia-logo.ico"
         Title="GitHub Application">
-	
-	<Window.Styles>
-		<StyleInclude Source="avares://GIT Application/Styles/AppStyle.axaml"/>
-	</Window.Styles>
 
-	<Grid RowDefinitions="30 2 *" ColumnDefinitions="232 * 49" ShowGridLines="False">
-		<Menu Grid.Column="0" Grid.ColumnSpan="2">
+
+	<Grid RowDefinitions="30 2 *" ColumnDefinitions="250 * 49" ShowGridLines="False">
+		<Menu Grid.Column="0" Grid.ColumnSpan="2" PointerPressed="Menu_PointerPressed">
 			<MenuItem Header="_Edit">
 				<MenuItem Header="_Exit"/>
 			</MenuItem>
@@ -28,6 +25,32 @@
 			</MenuItem>
 		</Menu>
 
+
+		<Grid ShowGridLines="False"
+			  Grid.Column="1" Grid.Row="3" RowDefinitions="25 *"
+			  Grid.ColumnSpan="2" Margin="0 0 12 0">
+
+			<StackPanel Orientation="Horizontal" Background="#262A29">
+
+				<Button Height="25" Width="120" Content="Pull Origin" Background="#262A29" Foreground="White"
+							BorderBrush="#141414"
+							CornerRadius="0"
+						FontSize="9" HorizontalContentAlignment="Center"/>
+
+				<Button Height="25" Width="120" Content="Push Origin" Background="#262A29" Foreground="White"
+						BorderBrush="#141414"
+						CornerRadius="0"
+						FontSize="9" HorizontalContentAlignment="Center"/>
+
+				<Button Height="25" Width="120" Content="Fetch Origin" Background="#262A29" Foreground="White"
+						BorderBrush="#141414"
+						CornerRadius="0"
+						FontSize="9" HorizontalContentAlignment="Center"/>
+
+			</StackPanel>
+
+		</Grid>
+
 		<Panel Grid.Row="1" Grid.ColumnSpan="3" Classes="GridSplitter"/>
 
 		<Grid ShowGridLines="False" Grid.Row="2" RowDefinitions="60, 2, 60, 2, 196, 2, *"
@@ -39,22 +62,30 @@
 			<TextBlock Grid.Row="0" Text="Praying-Mantis" Margin="50 16 0 0"
 					   Classes="PurpleFont"/>
 
-			<Image Grid.Row="0" HorizontalAlignment="Left" Width="45"
-				Source="/Assets/System ico/Lock.png"/>
-
-			<Image Grid.Row="2" Width="24" HorizontalAlignment="Left" Margin="11"
-				Source="/Assets/System ico/Branch.png"/>
-
 			<TextBlock Grid.Row="2" Text="Current branch" Margin="50 2 22 20"
 					   Classes="GrayFont"/>
 
 			<TextBlock Grid.Row="2" Text="Master" Margin="50 16 0 0"
 					   Classes="PurpleFont"/>
 
+			<TextBox Grid.Row="4" Height="72" Width="201" CornerRadius="10" Margin="0 0 0 10"/>
+			<TextBox Grid.Row="4" Height="24" Width="150" CornerRadius="10" Margin="50 0 0 140"/>
+
 			<Button Grid.Row="4" CornerRadius="50" HorizontalAlignment="Center"
 					VerticalAlignment="Bottom" Content="Commit to {Current Branch}"
 					Margin="22 20 22 20" Height="35" Width="201" Background="Purple"
 					Foreground="White"/>
+
+			<Image Grid.Row="0" HorizontalAlignment="Left" Width="45"
+				Source="/Assets/System ico/Lock.png"/>
+
+			<Image Grid.Row="2" Width="24" HorizontalAlignment="Left" Margin="11"
+				Source="/Assets/System ico/Branch.png"/>
+
+			<Image Grid.Row="4" Width="35"
+				   HorizontalAlignment="Left" VerticalAlignment="Top"
+				   Margin="20 13"
+				   Source="/Assets/avalonia-logo.ico"/>
 
 			<Panel Grid.Row="1" Grid.ColumnSpan="2" Classes="GridSplitter"/>
 			<Panel Grid.Row="3" Grid.ColumnSpan="2" Classes="GridSplitter"/>
@@ -64,6 +95,7 @@
 		</Grid>
 
 	</Grid>
+	
 
 	<Window.Styles>
 		<StyleInclude Source="avares://GIT Application/Styles/AppStyle.axaml"/>
