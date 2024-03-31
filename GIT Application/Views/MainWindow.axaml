@@ -16,8 +16,6 @@
 		<vm:MainWindowViewModel/>
 	</Design.DataContext>
 
-
-
 	<Window.Styles>
 		<StyleInclude Source="avares://GIT Application/Styles/AppStyle.axaml"/>
 	</Window.Styles>

@@ -13,7 +13,7 @@
 	<Style Selector="Panel.GridSplitter">
 		<Setter Property="Background" Value="#141414"/>
 	</Style>
-
+   
 	<Style Selector="MenuItem">
 		<Setter Property="Foreground" Value="White"/>
 		<Setter Property="VerticalAlignment" Value="Stretch"/>
@@ -32,4 +32,5 @@
 	</Style>
 	
     <!-- Add Styles Here -->
+
 </Styles>
