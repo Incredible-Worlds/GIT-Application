@@ -1,70 +1,15 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:rxui="http://reactiveui.net"
         xmlns:vm="using:GIT_Application.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
-		Width="800" Height="600"
-		MinWidth="800" MinHeight="600"
+		Width="1000" Height="640"
+		MinWidth="1000" MinHeight="640"
         x:Class="GIT_Application.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/Git-logo.png"
-        Title="GitHub Application">
-
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-
-	<Window.Styles>
-		<StyleInclude Source="avares://GIT Application/Styles/AppStyle.axaml"/>
-	</Window.Styles>
-
-	<Grid RowDefinitions="30 2 .3* .1* * .1*" ColumnDefinitions="49 * 49" ShowGridLines="False">
-		<Image Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" 
-			   Source="avares://GIT Application/Assets/Git-logo.png" />
-		<Menu Grid.Column="1" PointerPressed="Menu_PointerPressed">
-			<MenuItem Header="_Edit">
-				<MenuItem Header="_Exit"/>
-			</MenuItem>
-			<MenuItem Header="_File">
-
-			</MenuItem>
-			<MenuItem Header="_Repository">
-
-			</MenuItem>
-			<MenuItem Header="_Branch">
-
-			</MenuItem>
-		</Menu>
-		<Panel Grid.Row="1" Grid.ColumnSpan="3" Classes="GridSplitter"/>
-		<TextBlock Classes="Header" Grid.Row="2" Grid.Column="1" Text="{Binding GreetingLangS}"/>
-		<TextBlock Classes="GrayFont" Grid.Row="3" Grid.Column="1" Text="{Binding GreetingAddRepoS}"/>
-		<Grid Grid.Row="4" Grid.Column="1" ColumnDefinitions="* 2 *" RowDefinitions="0.6* * * * * * 0.6*" ShowGridLines="False">
-			<TextBlock Classes="GrayFont" Text="{Binding CloneRepoS}" Padding="50 0 0 0"/>
-
-			<Button Classes="Confirm" Grid.Row="5" Content="Clone" Width="88" Margin="0 0 50 0"/>
-
-			<Panel Grid.Column="1" Grid.RowSpan="6" Classes="GridSplitter"/>
-			
-			<TextBlock Grid.Column="2" Classes="GrayFont" Text="{Binding CreateRepoS}" Padding="50 0 0 0"/>
-			
-			<TextBlock Grid.Column="2" Grid.Row="1" Classes="FieldsFont" Padding="50 0 0 0" 
-					   Text="{Binding NameRepoS}"/>
-			<TextBox Grid.Column="2" Grid.Row="1" Height="24" Width="252"/>
-			<TextBlock Grid.Column="2" Grid.Row="2" Classes="FieldsFont" Padding="50 0 0 0" 
-					   Text="{Binding DescriptionS}"/>
-			<TextBox Grid.Column="2" Grid.Row="2" Height="24" Width="252"/>
-			<TextBlock Grid.Column="2" Grid.Row="3" Classes="FieldsFont" Padding="50 0 0 0" 
-					   Text="{Binding LocalPathS}"/>
-			<TextBox Grid.Column="2" Grid.Row="3" Height="24" Width="252"/>
-			<TextBlock Grid.Column="2" Grid.Row="4" Classes="FieldsFont" Padding="50 0 0 0" 
-					   Text="{Binding GitIgnoreS}"/>
-			<TextBox Grid.Column="2" Grid.Row="4" Height="24" Width="252"/>
-			<Button Classes="Confirm" Grid.Row="5" Grid.Column="6" Content="Create" Width="88" Margin="0 0 144 0"/>
-			<Button Classes="Cancel" Grid.Row="5" Grid.Column="6" Content="Create" Width="88" Margin="0 0 50 0"/>
-		</Grid>
-	</Grid>
-	
+        Title="GitHub Application"
+	    Content="{Binding Content}">
 </Window>

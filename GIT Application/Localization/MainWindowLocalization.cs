@@ -2,7 +2,7 @@
 
 namespace GIT_Application.ViewModels
 {
-    public partial class MainWindowViewModel : ViewModelBase
+    public partial class MainPageViewModel : ViewModelBase
     {
         public string GreetingLangS { get; set; }
         public string GreetingAddRepoS { get; set; }
