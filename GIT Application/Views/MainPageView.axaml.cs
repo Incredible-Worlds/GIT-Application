@@ -8,10 +8,5 @@ namespace GIT_Application.Views
         {
             InitializeComponent();
         }
-
-        private void Window_PointerPressed(object? sender, Avalonia.Input.PointerPressedEventArgs e)
-        {
-            BeginMoveDrag(e);
-        }
     }
 }
