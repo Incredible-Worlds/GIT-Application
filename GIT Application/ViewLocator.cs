@@ -7,6 +7,8 @@ namespace GIT_Application
 {
     public class ViewLocator : IDataTemplate
     {
+        public bool SupportsRecycling => false;
+
         public Control? Build(object? data)
         {
             if (data is null)
