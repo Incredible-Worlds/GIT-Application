@@ -1,15 +1,13 @@
-<Window xmlns="https://github.com/avaloniaui"
+<UserControl xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:GIT_Application.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
-        x:Class="GIT_Application.Views.RepositoryPage"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="GitHub Application">
+        x:Class="GIT_Application.Views.RepositoryPage">
 
 
-	<Grid RowDefinitions="30 2 *" ColumnDefinitions="250 * 49" ShowGridLines="False">
+	<Grid RowDefinitions="30 2 *" ColumnDefinitions="245 * 49" ShowGridLines="False">
 		<Menu Grid.Column="0" Grid.ColumnSpan="2" PointerPressed="Menu_PointerPressed">
 			<MenuItem Header="_Edit">
 				<MenuItem Header="_Exit"/>
@@ -25,33 +23,36 @@
 			</MenuItem>
 		</Menu>
 
+		<Panel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="1" Classes="GridSplitter"/>
 
-		<Grid ShowGridLines="False"
-			  Grid.Column="1" Grid.Row="3" RowDefinitions="25 *"
-			  Grid.ColumnSpan="2" Margin="0 0 12 0">
+		<Grid ShowGridLines="False" Grid.Column="1" Grid.Row="3" 
+			  RowDefinitions="25, 1"
+			  ColumnDefinitions="2, 116, 2, 116, 2, 118, 2, *"
+			  Grid.ColumnSpan="2">
 
-			<StackPanel Orientation="Horizontal" Background="#262A29">
-
-				<Button Height="25" Width="120" Content="Pull Origin" Background="#262A29" Foreground="White"
-							BorderBrush="#141414"
-							CornerRadius="0"
+			<StackPanel Orientation="Horizontal" Background="#262A29" Grid.ColumnSpan="8">
+				
+				<Button Height="25" Width="120" Content="Pull Origin"
+						Background="#262A29" Foreground="White" 
 						FontSize="9" HorizontalContentAlignment="Center"/>
 
-				<Button Height="25" Width="120" Content="Push Origin" Background="#262A29" Foreground="White"
-						BorderBrush="#141414"
-						CornerRadius="0"
+				<Button Height="25" Width="120" Content="Push Origin"
+						Background="#262A29" Foreground="White"
 						FontSize="9" HorizontalContentAlignment="Center"/>
 
-				<Button Height="25" Width="120" Content="Fetch Origin" Background="#262A29" Foreground="White"
-						BorderBrush="#141414"
-						CornerRadius="0"
+				<Button Height="25" Width="120" Content="Fetch Origin"
+						Background="#262A29" Foreground="White"
 						FontSize="9" HorizontalContentAlignment="Center"/>
 
 			</StackPanel>
 
-		</Grid>
 
-		<Panel Grid.Row="1" Grid.ColumnSpan="3" Classes="GridSplitter"/>
+			<Panel Grid.Column="2" Grid.RowSpan="1" Classes="GridSplitter"/>
+			<Panel Grid.Column="4" Grid.RowSpan="1" Classes="GridSplitter"/>
+			<Panel Grid.Column="6" Grid.RowSpan="1" Classes="GridSplitter"/>
+			<Panel Grid.Row="2" Grid.ColumnSpan="8" Classes="GridSplitter"/>
+
+		</Grid>
 
 		<Grid ShowGridLines="False" Grid.Row="2" RowDefinitions="60, 2, 60, 2, 196, 2, *"
 			  ColumnDefinitions="230, 2">
@@ -97,8 +98,8 @@
 	</Grid>
 	
 
-	<Window.Styles>
+	<UserControl.Styles>
 		<StyleInclude Source="avares://GIT Application/Styles/AppStyle.axaml"/>
-	</Window.Styles>
+	</UserControl.Styles>
 
-</Window>
+</UserControl>
