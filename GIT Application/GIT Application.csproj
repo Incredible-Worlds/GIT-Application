@@ -16,6 +16,8 @@
 
   <ItemGroup>
     <None Remove="Assets\Git-logo.png" />
+    <None Remove="Assets\System ico\Branch.png" />
+    <None Remove="Assets\System ico\Lock.png" />
   </ItemGroup>
 
 

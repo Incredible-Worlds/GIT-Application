@@ -10,6 +10,7 @@
 		<Setter Property="Background" Value="#313433"/>
 	</Style>
 
+
 	<Style Selector="Grid.DefaultPage">
 		<Setter Property="Background" Value="#313433"/>
 	</Style>
@@ -17,7 +18,7 @@
 	<Style Selector="Panel.GridSplitter">
 		<Setter Property="Background" Value="#141414"/>
 	</Style>
-	
+
 	<Style Selector="MenuItem">
 		<Setter Property="Foreground" Value="White"/>
 		<Setter Property="FontWeight" Value="SemiBold"/>
@@ -27,6 +28,7 @@
 	<Style Selector="TextBlock">
 		<Setter Property="FontWeight" Value="SemiBold"/>
 	</Style>
+   
 	<Style Selector="TextBlock.Header">
 		<Setter Property="FontWeight" Value="SemiBold"/>
 		<Setter Property="FontSize" Value="24"/>
@@ -34,11 +36,19 @@
 		<Setter Property="VerticalAlignment" Value="Bottom"/>
 		<Setter Property="Foreground" Value="White"/>
 	</Style>
+
 	<Style Selector="TextBlock.GrayFont">
 		<Setter Property="VerticalAlignment" Value="Center"/>
 		<Setter Property="Foreground" Value="#777777"/>
 		<Setter Property="FontWeight" Value="SemiBold"/>
 	</Style>
+
+  <Style Selector="TextBlock.PurpleFont">
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Foreground" Value="#AC1E9F"/>
+		<Setter Property="FontWeight" Value="SemiBold"/>
+	</Style>
+   
 	<Style Selector="TextBlock.FieldsFont">
 		<Setter Property="FontSize" Value="12"/>
 		<Setter Property="FontWeight" Value="Regular"/>
@@ -52,10 +62,12 @@
 		<Setter Property="HorizontalContentAlignment" Value="Center"/>
 		<Setter Property="HorizontalAlignment" Value="Right"/>
 	</Style>
+   
 	<Style Selector="Button.Confirm /template/ ContentPresenter">
 		<Setter Property="CornerRadius" Value="20"/>
 		<Setter Property="Background" Value="#33BB49"/>
 	</Style>
+   
 	<Style Selector="Button:pointerover.Confirm /template/ ContentPresenter">
 		<Setter Property="Background" Value="#209333"/>
 	</Style>
@@ -67,10 +79,12 @@
 		<Setter Property="HorizontalContentAlignment" Value="Center"/>
 		<Setter Property="HorizontalAlignment" Value="Right"/>
 	</Style>
+   
 	<Style Selector="Button.Cancel /template/ ContentPresenter">
 		<Setter Property="CornerRadius" Value="20"/>
 		<Setter Property="Background" Value="#EA504B"/>
 	</Style>
+   
 	<Style Selector="Button:pointerover.Cancel /template/ ContentPresenter">
 		<Setter Property="Background" Value="#A8302C"/>
 	</Style>
@@ -80,4 +94,7 @@
 		<Setter Property="BorderThickness" Value="0"/>
 		<Setter Property="CornerRadius" Value="10"/>
 	</Style>
+
+	
+    <!-- Add Styles Here -->
 </Styles>
