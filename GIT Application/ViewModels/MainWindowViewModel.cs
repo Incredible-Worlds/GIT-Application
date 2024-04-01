@@ -20,5 +20,10 @@ namespace GIT_Application.ViewModels
         ViewModelBase content;
 
         public MainPageViewModel StartUpPage { get; }
+
+        public void Foo()
+        {
+            
+        }
     }
 }
