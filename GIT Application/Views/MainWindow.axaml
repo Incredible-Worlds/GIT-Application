@@ -9,6 +9,7 @@
 		MinWidth="1000" MinHeight="640"
         x:Class="GIT_Application.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
+		WindowStartupLocation="CenterScreen"
         Icon="/Assets/Git-logo.png"
         Title="GitHub Application"
 	    Content="{Binding Content}">

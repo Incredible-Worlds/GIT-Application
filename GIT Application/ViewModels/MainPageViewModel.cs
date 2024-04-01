@@ -1,4 +1,5 @@
 ﻿using GIT_Application.Localization;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,15 @@ namespace GIT_Application.ViewModels
 
         public MainPageViewModel() 
         {
+            ContentLoad = new LoadingPopUpViewModel();
             LocalizationStartUp();
         }
+
+        public ViewModelBase ContentLoad
+        {
+            get => content;
+            private set => this.RaiseAndSetIfChanged(ref content, value);
+        }
+        ViewModelBase content;
     }
 }

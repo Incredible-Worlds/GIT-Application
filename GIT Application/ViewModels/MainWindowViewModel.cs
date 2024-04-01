@@ -2,6 +2,7 @@
 using GIT_Application.Views;
 using ReactiveUI;
 using System.Collections.Generic;
+using System.Reactive.Linq;
 
 namespace GIT_Application.ViewModels
 {
@@ -9,7 +10,7 @@ namespace GIT_Application.ViewModels
     {
         public MainWindowViewModel() 
         {
-            Content = StartUpPage = new MainPageViewModel();
+            Content = new MainPageViewModel();
         }
 
         public ViewModelBase Content
@@ -21,9 +22,13 @@ namespace GIT_Application.ViewModels
 
         public MainPageViewModel StartUpPage { get; }
 
+        public RepositoryPageViewModel RepositoryGITPage { get; set; }
+
         public void Foo()
         {
-            
+            var vm = new RepositoryPageViewModel();
+
+            Content = vm;
         }
     }
 }

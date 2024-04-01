@@ -10,7 +10,6 @@
 		<Setter Property="Background" Value="#313433"/>
 	</Style>
 
-
 	<Style Selector="Grid.DefaultPage">
 		<Setter Property="Background" Value="#313433"/>
 	</Style>

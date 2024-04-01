@@ -13,5 +13,10 @@ namespace GIT_Application.Views
             this.ExtendClientAreaTitleBarHeightHint = 30;
             InitializeComponent();
         }
+
+        private void Window_PointerPressed(object? sender, Avalonia.Input.PointerPressedEventArgs e)
+        {
+            BeginMoveDrag(e);
+        }
     }
 }

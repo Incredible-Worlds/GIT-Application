@@ -4,11 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
-        x:Class="GIT_Application.Views.RepositoryPage">
+		x:DataType="vm:RepositoryPageViewModel"
+        x:Class="GIT_Application.Views.RepositoryPageView">
 
 
-	<Grid RowDefinitions="30 2 *" ColumnDefinitions="245 * 49" ShowGridLines="False">
-		<Menu Grid.Column="0" Grid.ColumnSpan="2" PointerPressed="Menu_PointerPressed">
+	<Grid Classes="DefaultPage" RowDefinitions="30 2 *" ColumnDefinitions="49 196 * 49" ShowGridLines="False">
+		<Image Height="16" HorizontalAlignment="Center" VerticalAlignment="Center"
+			   Source="avares://GIT Application/Assets/Git-logo.png" />
+		<Menu Grid.Column="1" Grid.ColumnSpan="2">
 			<MenuItem Header="_Edit">
 				<MenuItem Header="_Exit"/>
 			</MenuItem>
@@ -23,9 +26,9 @@
 			</MenuItem>
 		</Menu>
 
-		<Panel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="1" Classes="GridSplitter"/>
+		<Panel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="1" Classes="GridSplitter"/>
 
-		<Grid ShowGridLines="False" Grid.Column="1" Grid.Row="3" 
+		<Grid ShowGridLines="False" Grid.Column="2" Grid.Row="3" 
 			  RowDefinitions="25, 1"
 			  ColumnDefinitions="2, 116, 2, 116, 2, 118, 2, *"
 			  Grid.ColumnSpan="2">

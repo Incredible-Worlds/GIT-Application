@@ -34,11 +34,12 @@
 		<Grid Grid.Row="4" Grid.Column="1" ColumnDefinitions="* 2 *" RowDefinitions="0.6* * * * * * 0.6*" ShowGridLines="False">
 			<ContentPresenter x:Name="testing"/>
 
-
 			<TextBlock Classes="GrayFont" Text="{Binding CloneRepoS}" Padding="50 0 0 0"/>
 
-			<Button Classes="Confirm" Grid.Row="5" Content="Clone" Width="88" Margin="0 0 50 0"/>
-
+			<Button Classes="Confirm" Grid.Row="5" Content="Clone!!" Width="88" Margin="0 0 50 0"
+					Command="{Binding $parent[Window].((vm:MainWindowViewModel)DataContext).Foo}"/>
+			
+			
 			<Panel Grid.Column="1" Grid.RowSpan="6" Classes="GridSplitter"/>
 
 			<TextBlock Grid.Column="2" Classes="GrayFont" Text="{Binding CreateRepoS}" Padding="50 0 0 0"/>
@@ -59,7 +60,14 @@
 					   Text="{Binding GitIgnoreS}"/>
 			<TextBox Grid.Column="2" Grid.Row="4" Height="24" Margin="50 0 50 0"/>
 
-			<Button Classes="Confirm" Grid.Row="5" Grid.Column="6" Content="Create" Width="88" Margin="0 0 144 0"/>
+			<Button Classes="Confirm" Grid.Row="5" Grid.Column="6" Content="Create" Width="88" Margin="0 0 144 0">
+				<Button.Flyout>
+					<Flyout VerticalOffset="-300" HorizontalOffset="-260" Content="{Binding ContentLoad}">
+					</Flyout>
+				</Button.Flyout>
+			</Button>
+			
+			
 			<Button Classes="Cancel" Grid.Row="5" Grid.Column="6" Content="Create" Width="88" Margin="0 0 50 0"/>
 		</Grid>
 	</Grid>
