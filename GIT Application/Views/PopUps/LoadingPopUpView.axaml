@@ -1,0 +1,47 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             Width="380" Height="200"
+			 xmlns:vm="using:GIT_Application.ViewModels"
+			 x:DataType="vm:LoadingPopUpViewModel"
+			 x:Class="GIT_Application.Views.LoadingPopUpView"
+			 Cursor="AppStarting">
+	<Grid Width="320" Height="180">
+		<Border CornerRadius="15"
+				Background="#262A29"
+				BorderThickness="0"
+				BoxShadow="0 0 20 0 #000000">
+			<Grid ColumnDefinitions="34 * 34"
+				  RowDefinitions="40 2 .8* .4* *"
+				  Background="Transparent"
+				  ShowGridLines="False">
+				<Border Grid.ColumnSpan="3" CornerRadius="15 15 0 0" Background="#313433"/>
+				<TextBlock Grid.Column="1"
+						   VerticalAlignment="Center"
+						   HorizontalAlignment="Left">
+					Loading
+				</TextBlock>
+				<Panel Classes="GridSplitter" Grid.ColumnSpan="3" Grid.Row="1"/>
+				<TextBlock Grid.Column="1"
+						   Grid.Row="2"
+						   VerticalAlignment="Center"
+						   HorizontalAlignment="Center"
+						   Text="Cloning {Repository name}"/>
+				<TextBlock Grid.Column="1"
+						   Grid.Row="3"
+						   Classes="GrayFontPopUp"
+						   VerticalAlignment="Center"
+						   HorizontalAlignment="Center"
+						   Text="Please wait or cancel process by pressing button"/>
+				<Button Grid.Column="1"
+						Grid.Row="4"
+						Classes="Cancel"
+						Content="Cancel"
+						HorizontalAlignment="Center"
+						Width="150"/>
+			</Grid>
+		</Border>
+	</Grid>
+</UserControl>

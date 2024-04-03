@@ -62,7 +62,7 @@
 
 			<Button Classes="Confirm" Grid.Row="5" Grid.Column="6" Content="Create" Width="88" Margin="0 0 144 0">
 				<Button.Flyout>
-					<Flyout VerticalOffset="-300" HorizontalOffset="-260" Content="{Binding ContentLoad}">
+					<Flyout VerticalOffset="-350" HorizontalOffset="-260" Content="{Binding ContentLoad}">
 					</Flyout>
 				</Button.Flyout>
 			</Button>

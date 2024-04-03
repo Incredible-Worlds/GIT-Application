@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
         <Border Padding="20">
-            <!-- Add Controls for Previewer Here -->
+            <Button Classes="Confirm"/>
         </Border>
     </Design.PreviewWith>
 
@@ -42,7 +42,14 @@
 		<Setter Property="FontWeight" Value="SemiBold"/>
 	</Style>
 
-  <Style Selector="TextBlock.PurpleFont">
+	<Style Selector="TextBlock.GrayFontPopUp">
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Foreground" Value="#777777"/>
+		<Setter Property="FontWeight" Value="Regular"/>
+		<Setter Property="FontSize" Value="11"/>
+	</Style>
+	
+    <Style Selector="TextBlock.PurpleFont">
 		<Setter Property="VerticalAlignment" Value="Center"/>
 		<Setter Property="Foreground" Value="#AC1E9F"/>
 		<Setter Property="FontWeight" Value="SemiBold"/>
@@ -60,6 +67,7 @@
 		<Setter Property="VerticalContentAlignment" Value="Center"/>
 		<Setter Property="HorizontalContentAlignment" Value="Center"/>
 		<Setter Property="HorizontalAlignment" Value="Right"/>
+		<Setter Property="Cursor" Value="Hand"/>
 	</Style>
    
 	<Style Selector="Button.Confirm /template/ ContentPresenter">
@@ -77,6 +85,7 @@
 		<Setter Property="VerticalContentAlignment" Value="Center"/>
 		<Setter Property="HorizontalContentAlignment" Value="Center"/>
 		<Setter Property="HorizontalAlignment" Value="Right"/>
+		<Setter Property="Cursor" Value="Hand"/>
 	</Style>
    
 	<Style Selector="Button.Cancel /template/ ContentPresenter">
@@ -94,6 +103,10 @@
 		<Setter Property="CornerRadius" Value="10"/>
 	</Style>
 
+	<Style Selector="FlyoutPresenter">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="BorderThickness" Value="0"/>
+	</Style>
 	
     <!-- Add Styles Here -->
 </Styles>
